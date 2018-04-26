@@ -1,0 +1,55 @@
+@import '../styles';
+$hack_height: calc(100% - 70px);
+$content_height: calc(100% - 30px);
+@mixin hack_content_height {
+  -moz-height: $hack_height;
+  -webkit-height: $hack_height;
+  height: $hack_height;
+}
+@mixin hack_content_in_height {
+  -moz-height: $content_height;
+  -webkit-height: $content_height;
+  height: $content_height;
+}
+:host ::ng-deep .ant-layout{
+  height: 100%;
+  background-color: #fff;
+}
+:host ::ng-deep .ant-layout-header{
+  height: 40px;
+  line-height: 40px;
+}
+:host ::ng-deep .ant-layout-footer{
+  height: 30px;
+  line-height: 30px;
+  padding: 0;
+}
+:host ::ng-deep .logo {
+      height: 32px;
+      line-height: 32px;
+      color: #fff;
+      background: $head_color;
+      border-radius: 3px;
+      margin: 16px;
+      font-size: 20px;
+      text-align: center;
+      overflow: hidden;
+    }
+:host ::ng-deep .ant-layout-content{
+  @include hack_content_height;
+}
+    :host ::ng-deep .ant-layout-sider-collapsed .nav-text {
+      display: none;
+    }
+
+    :host ::ng-deep .ant-layout-sider-collapsed .ant-menu-submenu-title:after {
+      display: none;
+    }
+
+    :host ::ng-deep .ant-layout-sider-collapsed .anticon {
+      font-size: 16px;
+      margin-left: 8px;
+    }
+    .content{
+      @include hack_content_in_height;
+    }

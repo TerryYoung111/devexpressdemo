@@ -21,7 +21,11 @@
     "@angular/platform-browser": "^5.2.0",
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
+    "angular-auth-oidc-client": "^4.1.0",
     "core-js": "^2.4.1",
+    "devextreme": "^17.2.7",
+    "devextreme-angular": "^17.2.7",
+    "ng-zorro-antd": "^0.6.15",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
   },

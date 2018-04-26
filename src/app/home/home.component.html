@@ -1,0 +1,38 @@
+<p>
+  home works!
+</p>
+<dx-button text="Simple button"></dx-button>
+<div class="long-title"><h3>Sales Amount by Region</h3></div>
+<dx-pivot-grid id="sales"
+  [allowSortingBySummary]="true"
+  [allowSorting]="true"
+  [allowFiltering]="true"
+  [allowExpandAll]="true"
+  [height]="440"
+  [showBorders]="true"
+  [dataSource]="dataSource">
+  <dxo-texts allFields='全部'
+    collapseAll='收起'
+    expandAll='展开'
+    exportToExcel='导出'
+    grandTotal='合计'
+    noData=‘没有数据’
+    showFieldChooser=‘打开配置面板’
+    sortColumnBySummary=‘按{0}列排序’
+    sortRowBySummary=‘按{0}行排序’
+    removeAllSorting=‘移除排序’
+    total=‘合计’
+    ></dxo-texts>
+  <dxo-export [enabled]="true" fileName="Sales"></dxo-export>
+  <dxo-field-chooser
+    [enabled]="true"
+    [width]="800"
+    title="配置"
+    >
+    <dxo-texts allFields='全部'
+      columnFields='列区域'
+      dataFields='数据区域'
+      rowFields='行区域'
+      filterFields='过滤'></dxo-texts>
+  </dxo-field-chooser>
+</dx-pivot-grid>
